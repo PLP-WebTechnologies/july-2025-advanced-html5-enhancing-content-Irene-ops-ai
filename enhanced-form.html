@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-section Web Page with HTML5 Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header, nav, section, footer {
+            padding: 20px;
+            margin: 10px;
+        }
+        header, footer {
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 15px 0;
+        }
+        table, th, td {
+            border: 1px solid #555;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        caption {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        form {
+            background-color: #fafafa;
+            padding: 20px;
+            border: 1px solid #ccc;
+            max-width: 500px;
+            margin: auto;
+        }
+        fieldset {
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin: 5px 0 2px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 6px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            width: auto;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 8px 15px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Welcome to My Multi-section HTML5 Page</h1>
+        <p>Showcasing Lists, Tables, Media, and Forms</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#lists">Lists</a> | 
+        <a href="#tables">Tables</a> | 
+        <a href="#media">Media</a> | 
+        <a href="#form">Form</a>
+    </nav>
+
+    <!-- LISTS SECTION -->
+    <section id="lists">
+        <h2>Lists Example</h2>
+
+        <h3>Unordered List</h3>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>React</li>
+        </ul>
+
+        <h3>Ordered List</h3>
+        <ol>
+            <li>Plan the project</li>
+            <li>Write the code</li>
+            <li>Test and deploy</li>
+        </ol>
+
+        <h3>Description List</h3>
+        <dl>
+            <dt>HTML</dt>
+            <dd>The structure of the web</dd>
+            <dt>CSS</dt>
+            <dd>The style of the web</dd>
+        </dl>
+    </section>
+
+    <!-- TABLE SECTION -->
+    <section id="tables">
+        <h2>Tables Example</h2>
+        <table>
+            <caption>Course Schedule</caption>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Course</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>HTML Basics</td>
+                    <td>9:00 AM</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>CSS Styling</td>
+                    <td>11:00 AM</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>JavaScript Intro</td>
+                    <td>2:00 PM</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- MEDIA SECTION -->
+    <section id="media">
+        <h2>Media Examples</h2>
+
+        <h3>Image</h3>
+        <img src="bakery photo.jpg" alt="Variety of fruits" width="200" height="100">
+
+        <h3>Audio</h3>
+        <audio controls>
+            <source src="sample-audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <h3>Video</h3>
+        <video controls width="400">
+            <source src="nav video.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+    </section>
+
+    <!-- FORM SECTION -->
+    <section id="form">
+        <h2>HTML5 Form</h2>
+        <form action="#" method="post">
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" required minlength="2">
+
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" required minlength="2">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone (Format: 123-456-7890):</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+            </fieldset>
+
+            <!-- Account Details -->
+            <fieldset>
+                <legend>Account Details</legend>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required minlength="4" maxlength="12">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required minlength="6">
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </fieldset>
+
+            <!-- Preferences -->
+            <fieldset>
+                <legend>Preferences</legend>
+                <label for="color">Favorite Color:</label>
+                <input type="color" id="color" name="color">
+
+                <label for="course">Select a Course:</label>
+                <select id="course" name="course" required>
+                    <option value="">--Choose One--</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="javascript">JavaScript</option>
+                </select>
+
+                <label>Subscribe to Newsletter:</label>
+                <input type="radio" id="yes" name="subscribe" value="yes" required>
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="subscribe" value="no">
+                <label for="no">No</label>
+            </fieldset>
+
+            <!-- Comments -->
+            <fieldset>
+                <legend>Additional Comments</legend>
+                <label for="comments">Your Message:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Enter your message..."></textarea>
+            </fieldset>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Multi-section HTML5 Page Example</p>
+    </footer>
+
+</body>
+</html>
